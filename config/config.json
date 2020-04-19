@@ -1,9 +1,10 @@
 {
-    "name":"MGG Karlsruhe",
+    "name":"Jitsi Meet-Verwalter",
     "password":"",
-    "homepage":"https://mgg.karlsruhe.de/",
+    "homepage":"https://www.philipprogramm.de/",
+    "leader_password":"securepassword!",
     "jitsi-domain":"meet.jit.si",
     "conferences":[
-        {"name":"Ja leck mich doch", "jitsi-room":"mgg-test"}
+        {"name":"Example", "jitsi-room":"example-test"}
     ]
 }

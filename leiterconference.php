@@ -7,15 +7,15 @@
     $config = json_decode(file_get_contents("config/config.json"), true);
 
     //check if user is logged in
-        if (!isset($_SESSION["logged_in"])){
+        if (!isset($_SESSION["leiter_logged_in"])){
             // if variable logged in isn't set yet, set it to false
-            $_SESSION["logged_in"] = false;
+            $_SESSION["leiter_logged_in"] = false;
         }
-        if($_SESSION["logged_in"] !== true){
+        if($_SESSION["leiter_logged_in"] !== true){
             // if user isn't logged in
             if($config["password"] !== ""){
                 //if password is set
-                header("Location: login.php");
+                header("Location: leiterlogin.php");
             }
             // if no password is set, everyone can access the site => proceed
         }
@@ -78,7 +78,7 @@
             </div>
         </div>
         <span class="navbar-text">
-            <?php echo $fullname; if($email !== ""){?> - <?php echo $email; }; ?>
+            <?php echo $fullname; if($email !== ""){?> - <?php echo $email; }; ?> (Konferenzleiter)
         </span>
     </nav>
 
@@ -99,7 +99,7 @@
             roomName: '<?php echo $room; ?>',
             userInfo: {
                 email: '<?php echo $email; ?>',
-                displayName: '<?php echo $fullname; ?>'
+                displayName: 'Konferenzleiter: <?php echo $fullname; ?>'
             },
             parentNode: document.querySelector('#callcontainer')
         };
@@ -107,6 +107,7 @@
 
         // set conference name
         api.executeCommand('subject', '<?php echo $conferencename; ?>');
+
 
         // event listener functions
         //  room left
@@ -117,16 +118,6 @@
         // add event listeners
         api.addEventListeners({
             videoConferenceLeft: leaveRoom
-        });
-
-        // join silent
-        api.isAudioMuted().then(unmuted => {
-            api.executeCommand('toggleAudio');
-        });
-
-        // join without video
-        api.isVideoMuted().then(unmuted => {
-            api.executeCommand('toggleVideo');
         });
     </script>
 
