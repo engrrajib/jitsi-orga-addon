@@ -1,0 +1,9 @@
+{
+    "name":"MGG Karlsruhe",
+    "password":"",
+    "homepage":"https://mgg.karlsruhe.de/",
+    "jitsi-domain":"meet.jit.si",
+    "conferences":[
+        {"name":"Ja leck mich doch", "jitsi-room":"mgg-test"}
+    ]
+}
