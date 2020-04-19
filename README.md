@@ -30,3 +30,12 @@ The list of all conference rooms, that users should be able to use.
 Format:
 `{"name":"<ENTER READABLE NAME HERE", "jitsi-room":"<ENTER THE jitsi room-id of destination room here>"}`
 for multiple conference rooms, just add multiple of this lines with an `,` at the end of each other, except for the last element.
+
+## Need more features?
+If you need more features like LDAP Authentication or permission groups, feel free to contact me:
+jitsi-orga@support.philipprogramm.de
+
+## Questions or Feedback
+If you have questions or feedback for me, feel free to contact me under jitsi-orga@support.philipprogramm.de or leave a ticket under "Issues"
+
+Have fun!
