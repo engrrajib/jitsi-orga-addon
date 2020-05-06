@@ -101,6 +101,16 @@
                 email: '<?php echo $email; ?>',
                 displayName: '<?php echo $fullname; ?>'
             },
+            interfaceConfigOverwrite:{
+                SHOW_JITSI_WATERMARK: false,
+                TOOLBAR_BUTTONS: [
+                    'microphone', 'camera', 'desktop', 'closedcaptions', 'desktop',
+                    'fodeviceselection', 'hangup', 'chat',
+                    'etherpad', 'raisehand',
+                    'videoquality', 'filmstrip',
+                    'tileview', 'videobackgroundblur'
+                ],
+            },
             parentNode: document.querySelector('#callcontainer')
         };
         const api = new JitsiMeetExternalAPI(domain, options);
