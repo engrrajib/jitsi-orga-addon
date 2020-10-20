@@ -12,7 +12,7 @@
     }
     if($_SESSION["leiter_logged_in"] !== true){
         // if user isn't logged in
-        if($config["password"] !== ""){
+        if($config["leader_password"] !== ""){
             //if password is set
             header("Location: leiterlogin.php");
         }
